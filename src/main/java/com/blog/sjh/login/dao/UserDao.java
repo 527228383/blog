@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.SelectProvider;
 import org.apache.ibatis.annotations.UpdateProvider;
 
 import com.blog.sjh.login.entity.User;
@@ -27,8 +28,8 @@ public interface UserDao {
 	 * @param id
 	 * @return
 	 */
-	//@SelectProvider(type = UserProvider.class, method = "gerUserInfo")
-	@Select("SELECT ID,USER_NAME,PASSWORD,SALT FROM USER WHERE ID = #{id}")
+	@SelectProvider(type = UserProvider.class, method = "gerUserInfo")
+	//@Select("SELECT ID,USER_NAME,PASSWORD,SALT FROM USER WHERE ID = #{id}")
 	User getUserInfo(@Param("id") String id);
 	
 	/**
