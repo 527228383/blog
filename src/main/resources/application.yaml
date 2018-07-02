@@ -1,0 +1,54 @@
+logging:
+   level:
+      com: debug
+mybatis:
+   configuration:
+      map-underscore-to-camel-case: true
+server: 
+   port: 8090
+spring:
+   freemarker:
+      ##设置是否允许HttpServletRequest属性重写(隐藏)控制器生成同名的模型属性
+      allow-request-override: false
+      ##设置是否允许HttpSession属性重写(隐藏)控制器生成同名的模型属性
+      allow-session-override: false
+      ##是否启用模板缓存
+      cache: false
+      ##模板编码
+      charset: UTF-8
+      ##检查模板位置是否存在
+      check-template-location: true
+      ##内容类型值
+      content-type: text/html
+      ##启用mvc视图解决方案
+      enabled: true
+      ##是否将所有请求属性添加到与模板合并之前的模型中
+      expose-request-attributes: false
+      ##设置是否所有HttpSession属性应该与模板融合之前添加到模型
+      expose-session-attributes: false
+      ##设置是否公开一个由spring的macro库使用的RequestContext, 名为"springMacroRequestContext"
+      expose-spring-macro-helpers: true
+      ##是否开启模板文件的热部署
+      prefer-file-system-access: true
+      ##视图前缀
+      prefix: 
+      ##Name of the RequestContext attribute for all views.
+      request-context-attribute: 
+      ##视图后缀
+      suffix: .ftl
+      ##模板路径配置，多个模板路径用分号分割
+      template-loader-path: classpath:/templates/
+      ##视图解析的白名单
+      view-names: 
+   redis: 
+      database: 0
+      host: 127.0.0.1
+      password: 
+      pool:
+         max-active: 8
+         max-idle: 8
+         max-wait: -1
+         min-idle: 1
+      port: 6380
+      timeout: 2000
+      
